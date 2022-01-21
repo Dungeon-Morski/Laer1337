@@ -1,0 +1,129 @@
+.header a img {
+    /* max-width: 220px;
+     width: 100%;  */
+    /* max-height: 70px;
+    height: 100%;
+
+    display: inline-block;   */
+}
+
+.header > a:after {
+    content: '';
+    height: 10px;
+    width: 40px;
+    color: black;
+
+}
+
+:root {
+    --small-text: 13px;
+    --normal-text: 17px;
+    --large-text: 20px;
+
+}
+
+a {
+    color: black;
+}
+
+.header__menu {}
+
+.header__menu > li,
+.gg {
+    display: ;
+
+    width: 100%;
+
+    position: relative;
+
+}
+
+.header__menu  a {
+
+   // сделать hover для ссылок
+
+}
+
+
+@media (min-width: 768px) {
+    .header__menu>li::before,
+    .gg::before {
+        content: '';
+        width: 80%;
+         /*hover*/
+        height: 3px;
+        top: -13px;
+        
+        background-color: #1ab374;
+        position: absolute;
+    }
+    
+}
+
+
+
+.header__menu li:hover::before{
+    background-color: rgb(239,61,66);
+}
+.hide {
+    display: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .header__menu {
+      
+  }
+summary::marker {
+    content: '';
+}
+@media (max-width: 768px) {
+    .md-li::after{
+        position: absolute;
+        right: 1rem;
+        
+        content: url('../images/about-content-img/footer-arrow.svg');
+        height: 15px !important;
+        width: 15px !important;
+    }
+    .li::after {
+
+        position: absolute;
+        right: 1rem;
+        
+        content: url('../images/about-content-img/footer-arrow.svg');
+        height: 15px !important;
+        width: 15px !important;
+        z-index: 10;
+    }
+    .li.rotate::after {
+      
+      transform: rotate(180deg);
+    
+    }
+}
+
+
+  @media (max-width: 768px) {
+    .burgerMenu{
+
+        position: absolute;
+        transition: .5s;
+        width: 0;
+        height: 0;
+        right: -9999px;
+        
+     }
+     .visibleClass{
+      
+        display: block !important;
+        width: 100%; 
+    height: 100%;
+        right: 0;
+        transition: .2s;
+         position: static;
+         z-index: 1;
+        
+
+    }
+}

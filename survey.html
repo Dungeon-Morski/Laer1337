@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Татнефть</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main-style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/header-style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/order.css">
+  </head>
+  <body class="">
+    <div class="container min-h-full mx-auto md:px-4 overflow-hidden">
+      <header class="header text-sm lg:text-sm relative ">
+        <div class="h before-block flex justify-between border-b md:border-b-0 pb-4 md:pb-0	items-end">
+          <div class=" min-h-full pl-4 md:px-0">
+            <a href="index.html">
+            <img class='w-36 md:w-52' src="images/header-images/logo.svg" alt="logo"></a>
+          </div>
+          
+          <div class="burger-btn  bg-gray-100  md:hidden absolute top-2 flex flex-col justify-center right-0">
+            <div class="relative ">
+              <nav x-data="{ open: false }">
+                <button class="text-gray-500 w-10 h-10 relative focus:outline-none bg-white" @click="open = !open">
+                  <span class="sr-only">Open main menu</span>
+                  <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                    <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                    <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                  </div>
+                </button>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <nav class="burgerMenu main-navigation flex  justify-center items-center 	mt-0 md:mt-12 ">
+          <ul class="header__menu  bg-gray-700 md:bg-white 
+            w-full flex  justify-center items-center 	flex-col md:flex-row text-gray-400 md:text-black  md:font-extralight">
+            <li class="bg-gray-700 md:bg-white py-4 md:py-0 border-b md:border-b-0 inline-block md:block hover:text-white duration-75	"><a class="w-full pl-4 md:pl-0 block" href="#">О компании</a></li>
+            <div class="dropdown py-4 md:py-0 md:w-11/12 w-full
+              bg-gray-700 md:bg-white py-4 md:py-0 border-b md:border-b-0 inline-block">
+              <li class="static md:relative opener md:relative gg 
+                inline-block hover:text-white duration-75
+                ">
+                <details class="block md:hidden pl-4 md:pl-0 block md:relative hover:cursor-pointer lists" close>
+                  <summary class="bg-gray-700 sum li md-li text-sm   dark:text-gray-400  select-none md:text-black font-extralight relative	">
+                    <a class='hover:text-white' href="#">Услуги</a>
+                  </summary>
+                  <div class="mt-3 text-sm md:absolute bg-gray-700 text-green-600 w-full z-10  p-0 md:p-4">
+                    <ul class="text-gray-400 text-xs ">
+                      <li class="py-1.5 hover:cursor-pointer hover:text-white duration-75	 duration-75">
+                        <a class='hover:cursor-pointer' href="afs-geo.html">Геодезические работы и аэрофотосъемка</a>
+                      </li>
+                      <li class="py-1.5 hover:cursor-pointer hover:text-white duration-75	hover:text-white duration-75">
+                        <a class='hover:cursor-pointer' href="aero-monitoring.html">Воздушный мониторинг линейных, площадных и локальных объектов	</a>
+                      </li>
+                     
+                     
+                      <li class="py-1.5 hover:cursor-pointer hover:text-white duration-75	hover:text-white duration-75">
+                        <a class='hover:cursor-pointer md:hover:text-green' href="Inspection.html">Инспекция промышленных объектов</a>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+               <a class='hidden md:block text-black' href=""> Услуги</a>
+                <ul class="dropdown2 text-white hidden md:block">
+                  <li class="dropdown2-li text-white">  <a class='hover:cursor-pointer text-white' href="afs-geo.html">Геодезические работы и аэрофотосъемка</a></li>
+                  <li class="dropdown2-li text-white">   <a class='hover:cursor-pointer text-white' href="aero-monitoring.html">Воздушный мониторинг линейных, площадных и локальных объектов	</a></li>
+                 
+                  <li class="dropdown2-li text-white"> <a class='hover:cursor-pointer text-white' href="Inspection.html">Инспекция промышленных объектов</a></li>
+                </ul>
+               </li>
+            </div>
+            
+            <li class="bg-gray-700 md:bg-white py-4 md:py-0 border-b md:border-b-0 inline-block md:block">
+				<a class='w-full pl-4 md:pl-0 block' href="gallery.html">Галерея</a></li>
+            <li class="bg-gray-700 md:bg-white py-4 md:py-0 border-b md:border-b-0 inline-block md:block "><a class='w-full pl-4 md:pl-0 block' href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="mt-[4vh] md:mt-14 ">
+        <h1 class="main-color text-center text-2xl">Обследование лесных и сельскохозяйственных угодий</h1>
+      <div class="wrapper   overflow-hidden	mb-8 pb-0 px-4 md:px-0 grid sm:block grid-flow-row grid-cols-1  mt-12 ">
+
+            
+        <img class='sm:float-left rounded-l	 h-full mt-0  pb-4 sm:mb-0 sm:w-4/12 sm:mr-12' src="images/AFS/images007.png" alt="">
+       
+    
+            <div class=" mb-14 h-full">
+              <h3 class="main-color text-lg">Результаты обработки данных</h3>
+              <p>Ортофотоплан. Максимально достоверно воссоздает земную поверхность.
+                Разрешение - до 5 см на пиксель. Широко используется для создания	 
+
+Деревья и кустарники&quot; Презентация,Деревья и кустарники&quot; Презентация
+Рисунок колосьев пшеницы — Уроки рисования
+топографических материалов, кадастровых карт и т.д.</p>
+          <p>Плотное облако точек. Представляет собой множество точек поверхности
+            объекта. Может использоваться для построения высокоточных 3D моделей.</p>
+          <p>Цифровая модель местности. Содержит информацию о рельефе	 	 
+            поверхности земли с учетом объектов, которые на ней находятся:	 	 
+            растительности, зданий и т.д.</p>
+          <p>3D-модель. Трехмерная модель местности или объекта на основе	 	 
+            плотного облака точек с привязкой к географическим координатам.	 
+            Благодаря использованию текстур, 3D модель выглядит реалистично.</p>
+          <p>Карта NDVI - источники актуальной информации о состоянии посевов.	 
+            По этим данным легко обнаружить участки с угнетенной растительностью,
+            нарушения процесса высева, подверженные эрозией области. 	 	 
+            Для сопровождения точного земледелия карты вегетационного индекса 	 
+            используются как исходные данные при определении однородных 	 	 
+            по плодородию зон. В сочетании с агрохимическим анализом почвы,	 
+            эти данные позволяют создавать файлы предписаний для	 	 	 	 
+            дифференцированного внесения минеральных удобрений.	</p>
+          <p>Масштабы: 1:500, 1:1000, 1:2000, 1:5000.</p>	</p>
+            </div>
+           
+          
+          
+     
+         
+    </div>
+    <div class="order-block bg-gray-100 p-8 mb-14 mt-0">
+      <form class='' action="">
+          <fieldset>
+            <legend class="text-xl main-color mb-14">Заказать услугу</legend>
+           <div class="order-fields grid md:grid-cols-2   gap-4 ">
+              <input class="py-3 md:py-2 pl-1  text-sm" type="text" placeholder='Имя'>
+              <input class="py-3 md:py-2 pl-1 text-sm" type="phone" placeholder='Телефон'>
+              <input class="py-3 md:py-2 pl-1 text-sm" type="text" placeholder='Организация'>
+              <input class="py-3 md:py-2 pl-1 text-sm" type="text" placeholder='E-mail'>
+
+              <input class="py-3 md:py-2 pl-1 text-sm row-span-auto" type="text" placeholder='Протяженность или площадь объекта (км/км²)'/>
+              
+             
+                  <input class="file-field relative flex flex-col gap-2 pl-1 text-sm text-slate-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-violet-50 file:text-green-500
+              hover:file:bg-violet-100 " type="file" placeholder='Прикрепить границы объектов обследования (файлы в формате .kml, .kmz)'>
+              
+             
+              
+              
+              <input class="py-3 md:py-2 pl-1 text-sm" type="text" placeholder='Выберите масштаб (1:500, 1:1000, 1:2000, 1:5000)'>
+             
+           </div>
+           <div class="results flex justify-between gap-2 flex-col md:flex-row mt-4">
+          <div class="result-checkbox flex flex-col ">
+            <h3 class="py-4">Результаты</h3>
+            <input class='cursor-pointer' type="checkbox" id="var1" name="answer1" value="">
+            <label class='cursor-pointer' for="var1"><span></span>Ортофотоплан</label>
+            <br>
+            <input class='cursor-pointer' type="checkbox" id="var2" name="answer1" value="">
+            <label class='cursor-pointer' for="var2"><span></span>	Плотное облако точек</label>
+            <br>
+            <input class='cursor-pointer' type="checkbox" id="var3" name="answer1" value="">
+            <label class='cursor-pointer' for="var3"><span></span>Цифровая модель местности</label>
+            <br>
+            <input class='cursor-pointer' type="checkbox" id="var4" name="answer1" value="">
+            <label class='cursor-pointer' for="var4"><span></span>	3D-модель местности</label>
+            <br>
+            <input class='cursor-pointer' type="checkbox" id="var5" name="answer1" value="">
+            <label class='cursor-pointer' for="var5"><span></span>	Карта NDVI</label>
+          
+            
+        
+            </div>  
+            <button class='place-self-center w-full md:w-max md:place-self-end border py-2 px-12 border-black hover:bg-green-500 hover:text-white hover:border-transparent ' type="submit">Отправить</button>
+           </div>
+          </fieldset>
+      
+        </form>
+    </div>
+      </main>
+    </div>
+    <footer class="footer h-full mt-6 w-full md:pt-8 pb-4  text-sm text-gray-400">
+        <div class="container min-h-full mx-auto px-0 md:px-4  md:pb-6">
+          <ul class="footer-navigation block md:flex justify-between flex-col  md:flex-row font-bold text-gray-400">
+            <li class="classs py-6 border-b md:border-0 pl-4 md:pl-0 border-gray-600 ">
+              <details class=" lists block md:hidden hover:cursor-pointer marler:hidden " close>
+                <summary class="li text-sm  dark:text-gray-400  select-none text-gray-400">
+                  О КОМПАНИИ
+                </summary>
+                <div class="mt-3 text-sm  text-slate-600 ">
+                  <ul class="text-gray-400 text-xs">
+                    <li class="py-1.5">
+                      <a href="">123</a>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <a class='hidden md:block' href=" ">О КОМПАНИИ</a>
+              <!-- Костыль -->
+            </li>
+            <li class="pl-4 md:pl-0 py-6 border-b md:border-0 border-gray-600"><a href="">ПРОДУКЦИЯ</a></li>
+            <li class="border-gray-600 pl-4 md:pl-0 py-6 border-b md:border-0 "><a href="#">РАСКРЫТИЕ ИНФОРМАЦИИ</a></li>
+            <li class="border-gray-600 pl-4 md:pl-0 py-6 border-b md:border-0">
+              <details class=" block md:hidden hover:cursor-pointer " close>
+                <summary class="li text-sm   dark:text-gray-400  select-none text-gray-400 ">
+                  ПРЕСС-ЦЕНТР
+                </summary>
+                <div class="mt-3 text-sm leading-6 text-slate-600 ">
+                  <ul class="text-gray-400 text-xs">
+                    <li class="py-1.5 hover:cursor-pointer">
+                      <a class='hover:cursor-pointer' href="">123</a>
+                    </li>
+                    <li class="py-1.5 cursor-pointer">
+                      <a href="">123</a>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <a class='hidden md:block' href=" ">ПРЕСС-ЦЕНТР</a>
+              <!-- Костыль -->
+            </li>
+          </ul>
+          
+        </div>
+        <hr class="footer-line">
+        <div class="sides container min-h-full mx-auto sm:flex justify-between pt-4 px-4">
+          <div class="left-side  ">
+            <ul class=" md:flex gap-2 justify-between text-xs md:text-green-600 items-center">
+              <li class=""><a href=""><span class="md:text-gray-400">© 2006—2022 ПАО «Татнефть».</span></a></li>
+              <li class="pt-1.5 md:pt-0"><a href="">Правовая информация</a></li>
+              <li class=" md:border-l md:border-r  md:border-slate-500 md:px-1"><a href="">Сайты организаций Группы «Татнефть»</a></li>
+              <li class="pt-1.5 md:pt-0"><a href="">Обратная связь</a></li>
+            </ul>
+          </div>
+          <div class="right-side">
+            <p class="text-gray-400 pt-1.5 sm:pt-0 md:text-green-600 text-xs"><a href="">Раскрытие информации на сайте агентства</a></p>
+          </div>
+        </div>
+      </footer>
+    <script src="js/main.js"></script>
+    <script src="js/about-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="js/burger-menu.js"></script>
+  </body>
+</html>

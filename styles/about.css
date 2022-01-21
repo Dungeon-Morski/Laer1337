@@ -1,0 +1,94 @@
+/* about-page slider */
+
+
+.swiper {
+ 
+    width:100%;
+    height: 380px;
+  }
+  .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  
+  }
+  .swiper-pagination-bullet {
+  background: white;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color:white;
+    font-size:30px !important;
+  }
+
+  @media (max-width: 800px) {
+    .swiper {
+    width:100%;
+    max-height:190px;
+  }
+    .swiper-button-prev::after,
+  .swiper-button-next::after {
+  
+    font-size:20px !important;
+  }
+  }
+  
+  @media (max-width: 550px) {
+    .swiper {
+    width:100%;
+    max-height:200px;
+  }
+   
+  }
+
+  /* about-page-content styles */
+  .main-text p {
+    margin:20px 0;
+}
+.power-list li{
+    position: relative;
+    
+    margin-left: 2vh;
+}
+.power-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color:    rgb(57, 180, 119);
+    
+    left:-2vh;
+    top:50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.news-card time {
+    color:#8d8d8d;
+}
+@media (max-width: 768px) {
+    .info-block {
+        display: block !important;
+    }
+}
+
+
+.next-news-btn  {
+  
+
+}
+a{
+  cursor: pointer;
+}
+/* .contact-btn {
+  position: relative;
+}
+.contact-btn::before{
+  content: url('../images/about-content-img/email.svg');
+  width: 28px !important;
+  height: 28px !important;
+  position: absolute;
+  left:6px;
+} */
+.footer {
+  background-color: rgb(41,47,58);
+}
